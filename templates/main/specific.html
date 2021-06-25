@@ -12,8 +12,6 @@
     <meta name="author" content="themefisher.com">
 
     <title>BlueCloud- It solutions &amp; </title>
-    <!-- Jquery for minimalistic approach to redirection -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <!-- bootstrap.min css -->
     <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}">
@@ -40,15 +38,6 @@
 </style>
 
 <body id="top-header">
-    <script>
-        // Redirection to a specific project page.
-        function call_counter(url, pk) {
-            window.open(url);
-            $.get('YOUR_VIEW_HERE/' + pk + '/', function(data) {
-                alert("counter updated!");
-            });
-        }
-    </script>
     <!-- LOADER TEMPLATE -->
     <div id="page-loader">
         <div class="loader-icon fa fa-spin colored-border"></div>
@@ -148,9 +137,7 @@
                         <h3>{{obj.name}}</h3>
                         <img src="{{ obj.def_image.url }}">
                         <p>{{obj.project_desc|slice:":200" }}</p>
-                        <a href="{% url 'specific' id=obj.id %}" class="nav-link js-scroll-trigger">
-                            See more..
-                        </a>
+                        <input type="button" value="See more"></input>
                     </div>
                     {% endfor %}
                 </div>

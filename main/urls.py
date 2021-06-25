@@ -6,7 +6,7 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('about/', views.about, name="about"),
     path('project/', views.project, name="project"),
-
+    path('project/<int:id>', views.specific, name="specific")
 
 
 

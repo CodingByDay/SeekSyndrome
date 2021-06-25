@@ -24,7 +24,19 @@ def project(request):
         "picture_list": picture       
     }
     
-    return render(request, 'main/project.html', context)        
+    return render(request, 'main/project.html', context)     
 
-
+   
+# Specific project view
+def specific(request, id):
+    object = Project.objects.get(id=id)
+    
+    # Getting the information to the view itself.
+    
+    context = {
+        "project": object
+    }
+    
+    
+    return render(request, 'main/specific.html', context)
      
