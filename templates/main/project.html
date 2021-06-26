@@ -14,6 +14,7 @@
     <title>SeekSyndrome- It solutions &amp; </title>
     <!-- Jquery for minimalistic approach to redirection -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="{% static 'images/ico/favicon.png' %}">
 
     <!-- bootstrap.min css -->
     <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}">
@@ -34,8 +35,17 @@
 </head>
 
 <style>
+    p {
+        color: black;
+        font-size: larger;
+    }
+    
     #block {
         background-color: #E6F1FB;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
     }
     
     #desc {
@@ -131,14 +141,14 @@
                 <div class="col-md-8 col-lg-6 text-center">
                     <div class="section-heading">
                         <!-- Heading -->
-                        <h2 class="section-title">
+                        <h1 class="section-title">
                             Our projects
-                        </h2>
+                        </h1>
 
                         <!-- Subheading -->
-                        <p>
+                        <h3>
                             We can help you create anything from a single web page to full stack enterprise solutions.
-                        </p>
+                        </h3>
 
                     </div>
                 </div>
@@ -174,7 +184,6 @@
                         <a href="#" class="footer-brand text-white">
                             BlueCloud
                         </a>
-                        <p>Each theme featured at the Bootstrap marketplace has been reviewed by Bootstrap's creators.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     </div>
                 </div>
 
@@ -206,7 +215,6 @@
 
             <div class="row text-right pt-5">
                 <div class="col-lg-12">
-                    <!-- Copyright -->
                     <p class="footer-copy ">
 
                     </p>

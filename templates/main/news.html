@@ -12,6 +12,7 @@
     <meta name="author" content="themefisher.com">
 
     <title>SeekSyndrome- It solutions &amp; </title>
+    <link rel="shortcut icon" href="{% static 'images/ico/favicon.png' %}">
 
     <!-- bootstrap.min css -->
     <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}">
@@ -32,6 +33,15 @@
 </head>
 
 <style>
+    img {
+        border-radius: 10%!important;
+    }
+    
+    p {
+        color: black;
+        font-size: larger;
+    }
+    
     figure {
         max-width: 300px!important;
         max-height: 300px!important;
@@ -110,7 +120,7 @@
     ================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark trans-navigation fixed-top navbar-togglable">
         <div class="container">
-            <a class="navbar-brand" href="index-3.html">
+            <a class="navbar-brand" href="{% url 'home' %}">
                 <h3>SeekSyndrome</h3>
             </a>
             <!-- Toggler -->
@@ -182,6 +192,10 @@
                     </h2>
                 </center>
 
+                <br>
+                <br>
+                <br>
+
                 <!-- Subheading -->
                 <center>
                     <p id="description">
@@ -190,12 +204,14 @@
                 </center>
 
 
-
+                <br>
+                <br>
+                <br>
 
                 <div id="slideshow-container">
                     <figure id="slideshow">
                         {% for picture in pictures %}
-                        <img src="{{ picture.image.url }}" width=200 height="200"> {% endfor %}
+                        <img src="{{ picture.image.url }}" width=400 height="400"> {% endfor %}
 
                     </figure>
                 </div>
