@@ -1,4 +1,5 @@
 {% load static %}
+
 <!doctype html>
 <html lang="en">
 
@@ -7,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="it">
-    <meta name="keywords" content="Rapoo,creative, agency, startup,onepage, clean, modern,business, company,it">
+    <meta name="keywords" content="SeekSyndrome,creative, agency, startup,onepage, clean, modern,business, company,it">
 
     <meta name="author" content="themefisher.com">
 
@@ -33,61 +34,7 @@
 </head>
 
 <style>
-    img {
-        border-radius: 10%!important;
-    }
-    
-    p {
-        color: black;
-        font-size: larger;
-    }
-    
-    figure {
-        max-width: 300px!important;
-        max-height: 300px!important;
-    }
-    
-    @keyframes fadey {
-        0% {
-            opacity: 0;
-        }
-        15% {
-            opacity: 1;
-        }
-        85% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
-    
-    figure#slideshow {
-        width: 80%;
-        margin: 0 auto;
-        position: relative;
-    }
-    
-    figure#slideshow img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: auto;
-        opacity: 0;
-    }
-    
-    figure#slideshow img:first-child {
-        position: relative;
-    }
-    
-    #description {
-        min-width: 100%!important;
-    }
-    
-    #project {
-        border: 1px solid black;
-    }
+
 </style>
 
 <body id="top-header">
@@ -96,31 +43,13 @@
         <div class="loader-icon fa fa-spin colored-border"></div>
     </div>
     <!-- /LOADER TEMPLATE -->
-    <script>
-        window.onload = function() {
-            var imgs = document.getElementById('slideshow').children;
-            interval = 8000;
-            currentPic = 0;
-            imgs[currentPic].style.webkitAnimation = 'fadey ' + interval + 'ms';
-            imgs[currentPic].style.animation = 'fadey ' + interval + 'ms';
-            var infiniteLoop = setInterval(function() {
-                imgs[currentPic].removeAttribute('style');
-                if (currentPic == imgs.length - 1) {
-                    currentPic = 0;
-                } else {
-                    currentPic++;
-                }
-                imgs[currentPic].style.webkitAnimation = 'fadey ' + interval + 'ms';
-                imgs[currentPic].style.animation = 'fadey ' + interval + 'ms';
-            }, interval);
-        }
-    </script>
+
 
     <!-- NAVBAR
     ================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark trans-navigation fixed-top navbar-togglable">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">
+            <a class="navbar-brand" href="index-3.html">
                 <h3>SeekSyndrome</h3>
             </a>
             <!-- Toggler -->
@@ -186,43 +115,31 @@
 
             <div class="section-heading">
                 <!-- Heading -->
+
+
+
+
+
+
+                <br>
+                <br>
+                <br>
+
                 <center>
-                    <h2 class="section-title">
-                        {{news.title}}
-                    </h2>
+                    <div>
+                        {%load crispy_forms_tags %} {% block content %}
+                        <h1>Contact Us</h1>
+                        <br>
+                        <br>
+                        <form method="post">
+                            {% csrf_token %} {{ form|crispy }}
+                            <div class="form-actions">
+                                <input type="submit" class="btn btn-success"></button>
+                            </div>
+                        </form>
+                    </div>
+                    {% endblock content %}
                 </center>
-
-                <br>
-                <br>
-                <br>
-
-                <!-- Subheading -->
-                <center>
-                    <p id="description">
-                        {{news.text}}}
-                    </p>
-                </center>
-
-
-                <br>
-                <br>
-                <br>
-
-                <div id="slideshow-container">
-                    <figure id="slideshow">
-                        {% for picture in pictures %}
-                        <img src="{{ picture.image.url }}" width=400 height="400"> {% endfor %}
-
-                    </figure>
-                </div>
-
-                <br>
-                <br>
-                <br>
-
-
-
-
                 <!-- / .row -->
 
                 <div class="row justify-content-center">
@@ -246,7 +163,6 @@
                         <a href="{% url 'home' %}" class="footer-brand text-white">
                             SeekSyndrome
                         </a>
-                        <p>Each theme featured at the Bootstrap marketplace has been reviewed by Bootstrap's creators.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     </div>
                 </div>
 

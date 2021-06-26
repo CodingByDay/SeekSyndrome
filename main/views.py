@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import Order, Project, Image, New, NewsPicture
+from django.core.mail import send_mail, BadHeaderError
+from .forms import ContactForm
 
-# Create your views here.
 
 
 
@@ -67,3 +68,29 @@ def news(request, id):
     
     
     return render(request, 'main/news.html', context)
+
+
+
+def contact(request):
+    if request.method == 'GET':
+        form = ContactForm()
+    else:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+            message = form.cleaned_data['message']
+            try:
+                send_mail(subject, message, from_email, ['jankojovicic351@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect('/') 
+
+
+            
+    return render(request, 'main/email.html', {'form': form})
+
+
+
+def successView(request):
+    return HttpResponse('Success! Thank you for your message.')

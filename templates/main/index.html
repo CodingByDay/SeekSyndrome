@@ -11,7 +11,7 @@
 
     <meta name="author" content="themefisher.com">
     <!--Example {% static '' %}-->
-    <title>SeekSyndrome- It solutions &amp; BlueCloud</title>
+    <title>SeekSyndrome- IT solutions </title>
     <link rel="shortcut icon" href="{% static 'images/ico/favicon.png' %}">
 
     <!-- bootstrap.min css -->
@@ -124,7 +124,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary main-nav navbar-togglable rounded-radius">
 
                 <a class="navbar-brand d-lg-none d-block" href="">
-                    <h4>BlueCloud</h4>
+                    <h4>SeekSyndrome</h4>
                 </a>
                 <!-- Toggler -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,7 +156,7 @@
                     </ul>
 
                     <ul class="ml-lg-auto list-unstyled m-0">
-                        <li><a href="#" class="btn btn-white btn-circled">Get a quote</a></li>
+                        <li><a href="{% url 'contact' %}" class="btn btn-white btn-circled">Get a quote</a></li>
                     </ul>
                 </div>
                 <!-- / .navbar-collapse -->
@@ -187,7 +187,7 @@
 
                         <!-- Button -->
                         <p class="mb-0">
-                            <a href="#" target="_blank" class="btn btn-primary btn-circled">
+                            <a href="{% url 'contact' %}" target="_blank" class="btn btn-primary btn-circled">
                                 Contact us
                             </a>
                         </p>
@@ -432,7 +432,7 @@
                     <div class="col-lg-4 col-sm-12">
                         <div class="footer-widget">
                             <!-- Brand -->
-                            <a href="#" class="footer-brand text-white">
+                            <a href="{% url 'home' %}" class="footer-brand text-white">
                            SeekSyndrome
                         </a>
                         </div>
