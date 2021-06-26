@@ -20,6 +20,7 @@ class Project(models.Model):
 class Image(models.Model):
     name = models.CharField(max_length=255,null=False)
     product = models.ForeignKey(Project, on_delete=models.CASCADE)
+    description = models.CharField(max_length=100, null=True)
     image = models.ImageField(upload_to='images')
     
     def __str__(self):
