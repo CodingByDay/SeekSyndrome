@@ -32,6 +32,10 @@
 </head>
 
 <style>
+    #description {
+        min-width: 100%!important;
+    }
+    
     #project {
         border: 1px solid black;
     }
@@ -112,37 +116,34 @@
 
     <section class="section" id="process">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6 text-center">
-                    <div class="section-heading">
-                        <!-- Heading -->
-                        <h2 class="section-title">
-                            Our projects
-                        </h2>
 
-                        <!-- Subheading -->
-                        <p>
-                            We can help you create anything from a single web page to full stack enterprise solutions.
-                        </p>
+            <div class="section-heading">
+                <!-- Heading -->
+                <center>
+                    <h2 class="section-title">
+                        {{project.name}}
+                    </h2>
+                </center>
 
+                <!-- Subheading -->
+                <center>
+                    <p id="description">
+                        {{project.project_desc}}}
+                    </p>
+                </center>
+                {% for picture in pictures %}
+
+                <img src="{{ picture.image.url }}" width=200 height="200"> {% endfor %}
+
+                <!-- / .row -->
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-sm-6 col-md-6">
+                        <div class="process-block">
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- / .row -->
-
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-sm-6 col-md-6">
-                    {% for obj in project_list %}
-                    <div class="process-block">
-                        <h3>{{obj.name}}</h3>
-                        <img src="{{ obj.def_image.url }}">
-                        <p>{{obj.project_desc|slice:":200" }}</p>
-                        <input type="button" value="See more"></input>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
 
     </section>
 

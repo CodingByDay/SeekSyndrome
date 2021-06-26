@@ -30,11 +30,13 @@ def project(request):
 # Specific project view
 def specific(request, id):
     object = Project.objects.get(id=id)
-    
+    pictures = Image.objects.filter(product=id)
     # Getting the information to the view itself.
     
     context = {
-        "project": object
+        "project": object,
+        "id": id,
+        "pictures": pictures
     }
     
     

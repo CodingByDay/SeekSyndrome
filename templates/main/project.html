@@ -34,8 +34,12 @@
 </head>
 
 <style>
-    #project {
-        border: 1px solid black;
+    #block {
+        background-color: #E6F1FB;
+    }
+    
+    #desc {
+        color: black;
     }
 </style>
 
@@ -144,10 +148,10 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     {% for obj in project_list %}
-                    <div class="process-block">
+                    <div class="process-block" id="block">
                         <h3>{{obj.name}}</h3>
                         <img src="{{ obj.def_image.url }}">
-                        <p>{{obj.project_desc|slice:":200" }}</p>
+                        <p id="desc">{{obj.project_desc|slice:":200" }}</p>
                         <a href="{% url 'specific' id=obj.id %}" class="nav-link js-scroll-trigger">
                             See more..
                         </a>
