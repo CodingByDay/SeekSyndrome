@@ -3,49 +3,49 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="it">
-  <meta name="keywords" content="Rapoo,creative, agency, startup,onepage, clean, modern,business, company,it">
-  
-  <meta name="author" content="themefisher.com">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="it">
+    <meta name="keywords" content="Rapoo,creative, agency, startup,onepage, clean, modern,business, company,it">
 
-  <title>Rapoo- It solutions &amp; Corporate template</title>
+    <meta name="author" content="themefisher.com">
 
-  <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}">
-  <!-- Animate Css -->
-  <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css' %}">
-  <!-- Icon Font css -->
-  <link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.css' %}">
-  <link rel="stylesheet" href="{% static 'plugins/fonts/Pe-icon-7-stroke.css' %}">
-  <!-- Themify icon Css -->
-  <link rel="stylesheet" href="{% static 'plugins/themify/css/themify-icons.css' %}">
-  <!-- Slick Carousel CSS -->
-  <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick.css' %}">
-  <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick-theme.css' %}">
+    <title>SeekSyndrome- It solutions &amp; Corporate template</title>
 
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css' %}">
+    <!-- Icon Font css -->
+    <link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/fonts/Pe-icon-7-stroke.css' %}">
+    <!-- Themify icon Css -->
+    <link rel="stylesheet" href="{% static 'plugins/themify/css/themify-icons.css' %}">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick-theme.css' %}">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
 
 
 <body id="top-header">
-<!-- LOADER TEMPLATE -->
-<div id="page-loader">
-    <div class="loader-icon fa fa-spin colored-border"></div>
-</div>
- <!-- /LOADER TEMPLATE -->
+    <!-- LOADER TEMPLATE -->
+    <div id="page-loader">
+        <div class="loader-icon fa fa-spin colored-border"></div>
+    </div>
+    <!-- /LOADER TEMPLATE -->
 
 
     <!-- NAVBAR
     ================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark trans-navigation fixed-top navbar-togglable">
         <div class="container">
-            <a class="navbar-brand" href="index-3.html">
-                <h3>Rapoo</h3>
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <h3>SeekSyndrome</h3>
             </a>
             <!-- Toggler -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,39 +57,18 @@
                 <!-- Links -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{% url 'home' %}" id="navbarWelcome" role="button" aria-haspopup="true" aria-expanded="false">
                             Home
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarWelcome">
-                             <a class="dropdown-item " href="index.html">
-                                Home-1
-                            </a>
-                            <a class="dropdown-item " href="index-2.html">
-                                Home-2
-                            </a> 
-                            <a class="dropdown-item " href="index-3.html">
-                                Home-3
-                            </a>
-                            <a class="dropdown-item " href="index-4.html">
-                                Home-4
-                            </a>
-                        </div>
+
                     </li>
                     <li class="nav-item ">
                         <a href="{% url 'about' %}" class="nav-link js-scroll-trigger">
                             About
                         </a>
                     </li>
-                    <li class="nav-item ">
-                        <a href="{% url 'services' %}" class="nav-link js-scroll-trigger">
-                            Services
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a href="{% url 'pricing' %}" class="nav-link js-scroll-trigger">
-                            Pricing
-                        </a>
-                    </li>
+
+
 
                     <li class="nav-item ">
                         <a href="{% url 'project' %}" class="nav-link js-scroll-trigger">
@@ -97,12 +76,14 @@
                         </a>
                     </li>
                 </ul>
-            </div> <!-- / .navbar-collapse -->
-        </div> <!-- / .container -->
+            </div>
+            <!-- / .navbar-collapse -->
+        </div>
+        <!-- / .container -->
     </nav>
-    
 
-   <!-- HERO
+
+    <!-- HERO
     ================================================== -->
     <section class="page-banner-area page-about">
         <div class="overlay"></div>
@@ -111,17 +92,19 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9 col-md-12 col-12 text-center">
                     <div class="page-banner-content">
-                        <h1 class="display-4 font-weight-bold">Creative It agency</h1>
+                        <h1 class="display-4 font-weight-bold">Creative agency</h1>
                         <p>We'd love to talk about how we can help you.</p>
                     </div>
                 </div>
-            </div> <!-- / .row -->
-        </div> <!-- / .container -->
+            </div>
+            <!-- / .row -->
+        </div>
+        <!-- / .container -->
     </section>
 
 
 
-<section class="section" id="process">
+    <section class="section" id="process">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6 text-center">
@@ -133,36 +116,36 @@
 
                         <!-- Subheading -->
                         <p>
-                            Rapoo can be used to create anything from a small marketing page to a sophisticated website.
                         </p>
 
                     </div>
                 </div>
-            </div> <!-- / .row -->
+            </div>
+            <!-- / .row -->
 
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="process-block">
-                        <img src="{% static 'images/process/process-1.jpg' %}" alt="" class="img-fluid">
+                        <img src="{% static 'images/projects/code.jpg' %}" alt="" class="img-fluid">
 
-                        <h3>Project Research</h3>
-                        <p>Nihil facere delectus eaque aut possimus nobis laudantium reprehenderit.</p>
+                        <h3>Programming projects</h3>
+                        <p>We have many years worth of expirience in developing complex systems, ranging from simple websites, to the most complex bussiness solutions.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="process-block">
-                        <img src="{% static 'images/process/process-2.jpg' %}" alt="" class="img-fluid">
+                        <img src="{% static 'images/projects/network.jpg' %}" alt="" class="img-fluid">
 
-                        <h3>Project demostration</h3>
-                        <p>Nihil facere delectus eaque aut possimus nobis laudantium reprehenderit.</p>
+                        <h3>Network design</h3>
+                        <p>We have experts in the field of networking and support</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="process-block">
-                        <img src="{% static 'images/process/process-3.jpg' %}" alt="" class="img-fluid">
+                        <img src="{% static 'images/projects/person.jpg' %}" alt="" class="img-fluid">
 
-                        <h3>Development & delivery</h3>
-                        <p>Nihil facere delectus eaque aut possimus nobis laudantium reprehenderit.</p>
+                        <h3>Design</h3>
+                        <p>Some of our staff graduated from universities of graphical design to ensure our clients get the best visual expirence.</p>
                     </div>
                 </div>
             </div>
@@ -170,7 +153,7 @@
     </section>
 
 
-<section class="section" id="projects-wrap">
+    <section class="section" id="projects-wrap">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
@@ -180,7 +163,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <p class="lead text-white">We are providing best service since 1990 to present , committed to best service delivery.Nullam metus enim, placerat in lacus vel, porttitor egestas libero. Etiam ex risus, feugiat eget accumsan eu, sagittis eu urna. In eget ultrices metus. Nunc accumsan </p>
+                    <p class="lead text-white"> </p>
                 </div>
             </div>
         </div>
@@ -191,28 +174,28 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
                     <div class="single-project">
-                        <img src="{% static 'images/projects/p-1.jpg' %}" alt="" class="img-fluid">
+                        <img src="{% static 'images/projects/python.jpg' %}" alt="" class="img-fluid">
                         <div class="project-content">
-                            <h4>Project: onepage</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                            <h4>Python</h4>
+                            <p>We love python for its versatility and ability to easily integrate amongst other solutions.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
                     <div class="single-project">
-                        <img src="{% static 'images/projects/p-4.jpg' %}" alt="" class="img-fluid">
+                        <img src="{% static 'images/projects/java.jpg' %}" alt="" class="img-fluid">
                         <div class="project-content">
-                            <h4>Project: business</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                            <h4>Java</h4>
+                            <p>We used java for a wide range of enterprise solutions, such as but not limited to android applications as well as on the web.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-8 ">
                     <div class="single-project">
-                        <img src="{% static 'images/projects/p-3.jpg' %}" alt="" class="img-fluid">
+                        <img src="{% static 'images/projects/c.jpg' %}" alt="" class="img-fluid">
                         <div class="project-content">
-                            <h4>Project : Marketing</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                            <h4>C#</h4>
+                            <p>A very powerfull modern toolset for developing solutions mainly on Microsoft platforms.</p>
                         </div>
                     </div>
                 </div>
@@ -228,7 +211,7 @@
                     <div class="project-content-block">
                         <h4>Do you know who we are?</h4>
                         <h2>More than just service your products...</h2>
-                        <p>Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and we will give you a complete account of the system.</p>
+                        <p>We try to bring real value and build trust with our clients.</p>
                     </div>
                 </div>
             </div>
@@ -236,120 +219,7 @@
     </section>
 
 
-<section class="section" id="section-testimonial">
-        <div class="container">
-           <div class="row align-items-center">
-                <div class="col-lg-4 col-sm-12 col-md-12">
-                    <div class="section-heading testimonial-heading">
-                        <h1>What they say <br>about us</h1>
-                        <p>Numquam doloribus impedit at consectetur molestiae tempora ratione possimus in veniam aperiam, eum consequuntur, unde. Earum ullam molestiae suscipit saepe sunt recusandae.</p>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-sm-12 col-md-12">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="test-inner ">
-                               <div class="test-author-thumb d-flex">
-                                   <img src="{% static 'images/client/test-1.jpg' %}" alt="Testimonial author" class="img-fluid">
-                                   <div class="test-author-info">
-                                       <h4>Will Barrow</h4>
-                                       <h6>Sunrise Paradise Hotel</h6>
-                                   </div>
-                               </div>
-
-                                Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="test-inner ">
-                               <div class="test-author-thumb d-flex">
-                                   <img src="{% static 'images/client/test-2.jpg' %}" alt="Testimonial author" class="img-fluid">
-                                   <div class="test-author-info">
-                                       <h4>Will Barrow</h4>
-                                       <h6>Sunrise Paradise Hotel</h6>
-                                   </div>
-                               </div>
-
-                                Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    
-                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="test-inner ">
-                               <div class="test-author-thumb d-flex">
-                                   <img src="{% static 'images/client/test-3.jpg' %}" alt="Testimonial author" class="img-fluid">
-                                   <div class="test-author-info">
-                                       <h4>Will Barrow</h4>
-                                       <h6>Sunrise Paradise Hotel</h6>
-                                   </div>
-                               </div>
-
-                                Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="test-inner ">
-                               <div class="test-author-thumb d-flex">
-                                   <img src="{% static 'images/client/test-4.jpg' %}" alt="Testimonial author" class="img-fluid">
-                                   <div class="test-author-info">
-                                       <h4>Will Barrow</h4>
-                                       <h6>Sunrise Paradise Hotel</h6>
-                                   </div>
-                               </div>
-
-                                Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    
-                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="test-inner">
-                               <div class="test-author-thumb d-flex">
-                                   <img src="{% static 'images/client/test-5.jpg' %}" alt="Testimonial author" class="img-fluid">
-                                   <div class="test-author-info">
-                                       <h4>Will Barrow</h4>
-                                       <h6>Sunrise Paradise Hotel</h6>
-                                   </div>
-                               </div>
-
-                                Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-6">
-                            <div class="test-inner">
-                               <div class="test-author-thumb d-flex">
-                                   <img src="{% static 'images/client/test-6.jpg' %}" alt="Testimonial author" class="img-fluid">
-                                   <div class="test-author-info">
-                                       <h4>Will Barrow</h4>
-                                       <h6>Sunrise Paradise Hotel</h6>
-                                   </div>
-                               </div>
-
-                                Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
- <section class="section" id="blog">
+    <section class="section" id="blog">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6 text-center">
@@ -365,68 +235,37 @@
                         </p>
                     </div>
                 </div>
-            </div> <!-- / .row -->
-
+            </div>
+            <!-- / .row -->
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6">
+
                     <div class="blog-box">
+                        {% for obj in news_list %}
+
                         <div class="blog-img-box">
-                            <img src="{% static 'images/blog/blog-1.jpg' %}" alt="" class="img-fluid blog-img">
+                            <img src="{{obj.picture.url}}" alt="" class="img-fluid blog-img">
                         </div>
                         <div class="single-blog">
                             <div class="blog-content">
-                                <h6> 17 October 2018</h6>
-                                <a href="#">
-                                    <h3 class="card-title">Top tips to speed up your site in a speedy time</h3>
+                                <a href="{% url 'news' id=obj.id %}">
+                                    <h3 class="card-title">{{obj.title}}}}</h3>
                                 </a>
-                                <p>There are many variations of passages Lorem Ipsum available, but majority have ama suffered altratio. the lorem.</p>
-                                <a href="#" class="read-more">Read More</a>
+                                <p>{{obj.text|slice:":200"}}</p>
+                                <a href="{% url 'news' id=obj.id %}" class="read-more">Read More</a>
                             </div>
                         </div>
+                        {% endfor %}
+
                     </div>
+
                 </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="blog-box">
-                        <div class="blog-img-box">
-                            <img src="{% static 'images/blog/blog-2.jpg' %}" alt="" class="img-fluid blog-img">
-                        </div>
-                        <div class="single-blog">
-                            <div class="blog-content">
-                                <h6> 17 October 2018</h6>
-                                <a href="#">
-                                    <h3 class="card-title">Brand your site value with marketing strategies</h3>
-                                </a>
-
-                                <p>There are many variations of passages Lorem Ipsum available, but majority have ama suffered altratio. the lorem.</p>
-                                 <a href="#" class="read-more">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-8">
-                    <div class="blog-box">
-                        <div class="blog-img-box">
-                            <img src="{% static 'images/blog/blog-3.jpg' %}" alt="" class="img-fluid blog-img">
-                        </div>
-                        <div class="single-blog">
-                            <div class="blog-content">
-                                <h6> 17 October 2018</h6>
-                                <a href="#">
-                                    <h3 class="card-title">Website Optimization is very essential for site speed</h3>
-                                </a>
-                                <p>There are many variations of passages Lorem Ipsum available, but majority have ama suffered altratio. the lorem.</p>
-                                 <a href="#" class="read-more">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
- <footer class="section " id="footer">
+    <footer class="section " id="footer">
         <div class="overlay footer-overlay"></div>
         <!--Content -->
         <div class="container">
@@ -435,9 +274,8 @@
                     <div class="footer-widget">
                         <!-- Brand -->
                         <a href="#" class="footer-brand text-white">
-                            Rapoo
+
                         </a>
-                        <p>Each theme featured at the Bootstrap marketplace has been reviewed by Bootstrap's creators.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     </div>
                 </div>
 
@@ -491,22 +329,7 @@
                                     About Us
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    Pricing
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Products Shop
-                                </a>
-                            </li>
 
-                            <li>
-                                <a href="#">
-                                    Contact
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -518,7 +341,7 @@
                         <ul class="list-unstyled footer-links">
                             <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
                             <li>
-                            <a href="#"><i class="fab fa-twitter"></i>Twitter
+                                <a href="#"><i class="fab fa-twitter"></i>Twitter
                             </a></li>
                             <li><a href="#"><i class="fab fa-pinterest-p"></i>Pinterest
                             </a></li>
@@ -529,7 +352,8 @@
                         </ul>
                     </div>
                 </div>
-            </div> <!-- / .row -->
+            </div>
+            <!-- / .row -->
 
 
             <div class="row text-right pt-5">
@@ -539,8 +363,10 @@
                         &copy; Copyright <span class="current-year">Themefisher</span> All rights reserved.
                     </p>
                 </div>
-            </div> <!-- / .row -->
-        </div> <!-- / .container -->
+            </div>
+            <!-- / .row -->
+        </div>
+        <!-- / .container -->
     </footer>
 
 
@@ -551,14 +377,14 @@
     </a>
 
 
-   
+
 
 
     <!-- 
     Essential Scripts
     =====================================-->
 
-    
+
     <!-- Main jQuery -->
     <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
     <!-- Bootstrap 3.1 -->
@@ -574,6 +400,6 @@
     <script src="{% static 'js/form/contact.js' %}"></script>
     <script src="{% static 'js/theme.js' %}"></script>
 
-  </body>
-  </html>
-   
+</body>
+
+</html>

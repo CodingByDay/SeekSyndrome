@@ -11,7 +11,7 @@
 
     <meta name="author" content="themefisher.com">
     <!--Example {% static '' %}-->
-    <title>BlueCloud- It solutions &amp; BlueCloud</title>
+    <title>SeekSyndrome- It solutions &amp; BlueCloud</title>
 
     <!-- bootstrap.min css -->
     <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}">
@@ -76,8 +76,8 @@
                 <div class="col-lg-2">
                     <div class="logo d-none d-lg-block">
                         <!-- Brand -->
-                        <a class="navbar-brand js-scroll-trigger" href="index.html">
-                            <h2>BlueCloud</h2>
+                        <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}">
+                            <h2>SeekSyndrome</h2>
                         </a>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                             <i class="ti-email"></i>
                         </div>
                         <div class="info-block">
-                            <h5 class="font-weight-500">bluecloud@bluecloud.com</h5>
+                            <h5 class="font-weight-500">help@seek.com</h5>
                             <p>Email Us</p>
                         </div>
                     </div>
@@ -181,7 +181,7 @@
 
                         <!-- Subheading -->
                         <p class="lead mb-4">
-                            BlueCloud is aimed at helping companies promote new products and business launches.
+                            SeekSyndrome is aimed at helping companies promote new products and business launches.
                         </p>
 
                         <!-- Button -->
@@ -350,53 +350,6 @@
             </div>
         </div>
     </section>
-    <section class="section" id="process">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6 text-center">
-                    <div class="section-heading">
-                        <!-- Heading -->
-                        <h2 class="section-title">
-                            Our Working process
-                        </h2>
-
-                        <!-- Subheading -->
-                        <p>
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-            <!-- / .row -->
-
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-sm-6 col-md-6">
-                    <div class="process-block">
-                        <img src="{% static 'images/process/process-1.jpg' %}" alt="" class="img-fluid">
-
-                        <h3>Warehouse QR scanner Android solution.</h3>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6">
-                    <div class="process-block">
-                        <img src="{% static 'images/process/process-2.jpg' %}" alt="" class="img-fluid">
-
-                        <h3>Ticketing system</h3>
-                        <p>Keep track of your bussiness</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6">
-                    <div class="process-block">
-                        <img src="{% static 'images/process/process-3.jpg' %}" alt="" class="img-fluid">
-
-                        <h3>Development & delivery</h3>
-                        <p>We work hard to do the best work possible.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     </section>
@@ -413,7 +366,6 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <p class="lead text-white">We are providing best service since 2019 to present , committed to best service delivery. </p>
                     </div>
                 </div>
             </div>
@@ -424,32 +376,33 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
                         <div class="single-project">
-                            <img src="{% static 'images/projects/p-1.jpg' %}" alt="" class="img-fluid">
+                            <img src="{% static 'images/projects/python.jpg' %}" alt="" class="img-fluid">
                             <div class="project-content">
-                                <h4>Project: onepage</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                                <h4>Python</h4>
+                                <p>We love python for its versatility and ability to easily integrate amongst other solutions.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
                         <div class="single-project">
-                            <img src="{% static 'images/projects/p-4.jpg' %}" alt="" class="img-fluid">
+                            <img src="{% static 'images/projects/java.jpg' %}" alt="" class="img-fluid">
                             <div class="project-content">
-                                <h4>Project: business</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                                <h4>Java</h4>
+                                <p>We used java for a wide range of enterprise solutions, such as but not limited to android applications as well as on the web.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-8 ">
                         <div class="single-project">
-                            <img src="{% static 'images/projects/p-3.jpg' %}" alt="" class="img-fluid">
+                            <img src="{% static 'images/projects/c.jpg' %}" alt="" class="img-fluid">
                             <div class="project-content">
-                                <h4>Project : Marketing</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                                <h4>C#</h4>
+                                <p>A very powerfull modern toolset for developing solutions mainly on Microsoft platforms.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
 
                 <div class="row py-4">
                     <div class="col-lg-7 col-md-12 col-sm-12 ">
@@ -479,45 +432,11 @@
                         <div class="footer-widget">
                             <!-- Brand -->
                             <a href="#" class="footer-brand text-white">
-                            Rapoo
+                           SeekSyndrome
                         </a>
-                            <p>Each theme featured at the Bootstrap marketplace has been reviewed by Bootstrap's creators.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 ml-lg-auto col-sm-12">
-                        <div class="footer-widget">
-                            <h3>Account</h3>
-                            <!-- Links -->
-                            <ul class="footer-links ">
-                                <li>
-                                    <a href="#">
-                                    Terms and conditions
-                                </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    Privacy policy
-                                </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    Affiliate services
-                                </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    Help and support
-                                </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    Frequently Asked Question
-                                </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
 
 
                     <div class="col-lg-2 col-sm-6">
@@ -527,7 +446,7 @@
                             <ul class="footer-links ">
                                 <li>
                                     <a href="#">
-                                    Services
+                                    Projects
                                 </a>
                                 </li>
                                 <li>
@@ -535,17 +454,10 @@
                                     About Us
                                 </a>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                    Pricing
-                                </a>
-                                </li>
 
 
-                                <li>
-                                    <a href="#">
-                                    Contact
-                                </a>
+
+
                                 </li>
                             </ul>
                         </div>

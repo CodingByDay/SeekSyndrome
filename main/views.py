@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Order, Project, Image
+from .models import Order, Project, Image, New, NewsPicture
 
 # Create your views here.
 
@@ -12,7 +12,15 @@ def home(request):
 
 #
 def about(request):
-    return render(request, 'main/about.html', {})    
+    project = New.objects.all()
+    picture = NewsPicture.objects.all()
+    
+    context = {
+        "news_list": project,
+        "picture_list": picture       
+    }
+    
+    return render(request, 'main/about.html', context)    
 
 
 def project(request):
@@ -42,3 +50,20 @@ def specific(request, id):
     
     return render(request, 'main/specific.html', context)
      
+
+# News view
+
+
+
+def news(request, id):
+    object = New.objects.get(id=id)
+    pictures = NewsPicture.objects.filter(product=id)
+    
+    context = {
+        "news": object,
+        "id": id,
+        "pictures": pictures
+    }
+    
+    
+    return render(request, 'main/news.html', context)
