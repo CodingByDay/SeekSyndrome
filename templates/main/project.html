@@ -28,7 +28,7 @@
     <!-- Slick Carousel CSS -->
     <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick.css' %}">
     <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick-theme.css' %}">
-
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -155,21 +155,37 @@
             </div>
             <!-- / .row -->
 
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-sm-6 col-md-6">
-                    {% for obj in project_list %}
-                    <div class="process-block" id="block">
-                        <h3>{{obj.name}}</h3>
-                        <img src="{{ obj.def_image.url }}">
-                        <p id="desc">{{obj.project_desc|slice:":200" }}</p>
+            <div class="collection">
+
+
+
+                <!-- Loop -->
+
+                {% for obj in project_list %}
+                <div class="product">
+                    <a class="product__image" href="#"><img src="{{ obj.def_image.url }}"></a>
+                    <div class="product__name">
+                        <p>
+                            <h5>{{obj.name}}</h5>
+                        </p>
+                        <p id="desc">{{obj.project_desc|slice:":30" }}</p>
+                    </div>
+                    <div class="product__price">
                         <a href="{% url 'specific' id=obj.id %}" class="nav-link js-scroll-trigger">
                             See more..
                         </a>
                     </div>
-                    {% endfor %}
                 </div>
+                {% endfor %}
+
+
+
+
+
+
             </div>
-        </div>
+
+
 
     </section>
 
