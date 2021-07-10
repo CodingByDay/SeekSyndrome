@@ -201,15 +201,13 @@
 
 
 
-
-                <div id="slideshow-container">
-                    <figure id="slideshow">
-                        {% for picture in pictures %}
-                        <img src="{{ picture.image.url }}" width=200 height="200"> {% endfor %}
-
-                    </figure>
-                </div>
-
+                {% for picture in pictures %} {% if forloop.first %}
+                <img src="{{ picture.image.url }}" width=200 height="200">
+                <h1>First</h1>
+                {% else %}
+                <img src="{{ picture.image.url }}" width=200 height="200">
+                <h1>Second</h1>
+                {% endif %} {% endfor %}
                 <br>
                 <br>
                 <br>

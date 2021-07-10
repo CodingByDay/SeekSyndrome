@@ -35,6 +35,24 @@
 </head>
 
 <style>
+    .product {
+        border-radius: 20%;
+        position: relative!important;
+    }
+    
+    .product__price {
+        text-align: center!important;
+        font-size: larger!important;
+        color: black!important;
+        margin: 0 auto!important;
+        display: flex;
+        justify-content: center;
+        float: center!important;
+        right: 50%;
+        bottom: 10px;
+        position: absolute!important;
+    }
+    
     p {
         color: black;
         font-size: larger;
@@ -46,6 +64,10 @@
         border-bottom-right-radius: 20px;
         border-top-right-radius: 20px;
         border-bottom-left-radius: 20px;
+    }
+    
+    .nav-link {
+        bottom: 0px!important;
     }
     
     #desc {
@@ -163,17 +185,24 @@
 
                 {% for obj in project_list %}
                 <div class="product">
-                    <a class="product__image" href="#"><img src="{{ obj.def_image.url }}"></a>
+                    <center>
+                        <a class="product__image" href="#"><img src="{{ obj.def_image.url }}"></a>
+                    </center>
                     <div class="product__name">
                         <p>
-                            <h5>{{obj.name}}</h5>
+                            <center>
+                                <h5>{{obj.name}}</h5>
+                            </center>
                         </p>
-                        <p id="desc">{{obj.project_desc|slice:":30" }}</p>
+                        <center>
+                            <p id="desc">{{obj.project_desc|slice:":30" }}</p>
+                        </center>
                     </div>
                     <div class="product__price">
-                        <a href="{% url 'specific' id=obj.id %}" class="nav-link js-scroll-trigger">
+
+                        <center><a href="{% url 'specific' id=obj.id %}" id="link" class="">
                             See more..
-                        </a>
+                        </a></center>
                     </div>
                 </div>
                 {% endfor %}

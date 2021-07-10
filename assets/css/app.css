@@ -9,12 +9,25 @@
     max-width: 800px;
 }
 
+#img {
+    margin-top: 10px!important;
+}
+
 .product {
+    position: relative;
+    min-height: 500px;
+    !important;
+    min width: 500px;
+    !important;
+    max-width: 500px;
+    !important;
+    max-height: 500px;
     &__image {
         background-color: #e5e5e5;
         display: block;
         min-height: 200px;
         width: 100%;
+        margin-top: 5px!important;
     }
     &__name {
         p {
@@ -28,9 +41,19 @@
         }
     }
     &__price {
+        position: absolute!important;
         p {
             font-family: sans-serif;
             font-size: 14px;
+            bottom: 0px !important;
         }
+        a {
+            position: absolute!important;
+            bottom: 0px!important;
+        }
+    }
+    #link {
+        bottom: 0!important;
+        position: absolute!important;
     }
 }
