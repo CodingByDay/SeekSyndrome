@@ -33,6 +33,30 @@
 </head>
 
 <style>
+    .foreground {
+        position: relative;
+        top: 0;
+        float: center;
+        margin: auto;
+        margin-left: 20px!important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .sidebar {
+        position: relative;
+        bottom: 0!important;
+        margin-bottom: 20px!important;
+    }
+    
+    .last {
+        position: relative;
+        bottom: 0!important;
+        margin-bottom: 20px!important;
+        float: right!important;
+    }
+    
     p {
         color: black;
         font-size: larger;
@@ -172,6 +196,7 @@
                     <div class="page-banner-content">
                         <h1 class="display-4 font-weight-bold">We create your brand</h1>
                         <p>We'd love to show you our projects.</p>
+
                     </div>
                 </div>
             </div>
@@ -188,9 +213,16 @@
                 <!-- Heading -->
                 <center>
                     <h2 class="section-title">
-                        {{project.name}}
+                        {{project.name}} <br>{% for picture in pictures %} {% if forloop.counter == 1 %}
+
                     </h2>
                 </center>
+
+                <div class="foreground"><img src="{{ picture.image.url }}" width=200 height="200">
+
+                </div>
+
+                <br>
 
                 <!-- Subheading -->
                 <center>
@@ -199,14 +231,22 @@
                     </p>
                 </center>
 
+                <br>
+                <br>
+                <br> {% elif forloop.counter == 2 %}
+                <div class="sidebar">
+                    <img src="{{ picture.image.url }}" width=200 height="200">
+
+                </div>
 
 
-                {% for picture in pictures %} {% if forloop.first %}
-                <img src="{{ picture.image.url }}" width=200 height="200">
-                <h1>First</h1>
-                {% else %}
-                <img src="{{ picture.image.url }}" width=200 height="200">
-                <h1>Second</h1>
+
+
+                {% elif forloop.counter == 3 %}
+                <div class="last">
+                    <img src="{{ picture.image.url }}" width=200 height="200">
+                    <h1>Third</h1>
+                </div>
                 {% endif %} {% endfor %}
                 <br>
                 <br>

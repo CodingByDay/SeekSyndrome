@@ -40,6 +40,10 @@
     </div>
     <!-- /LOADER TEMPLATE -->
     <style>
+        .blog-box {
+            background-color: antiquewhite;
+        }
+        
         p {
             color: black;
             font-size: larger;
@@ -258,10 +262,10 @@
                                     <h3 class="card-title">{{obj.title}}</h3>
                                 </a>
                                 <p>{{obj.text|slice:":200"}}</p>
-                                <a href="{% url 'news' id=obj.id %}" class="read-more">Read More</a>
+                                <center><a href="{% url 'news' id=obj.id %}" class="read-more">Read More</a></center>
                             </div>
                         </div>
-                        {% endfor %}
+                        <br> {% endfor %}
 
                     </div>
 

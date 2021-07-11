@@ -33,6 +33,30 @@
 </head>
 
 <style>
+    .first {
+        position: relative;
+        top: 0;
+        float: center;
+        margin: auto;
+        margin-left: 20px!important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .second {
+        position: relative;
+        bottom: 0!important;
+        margin-bottom: 20px!important;
+    }
+    
+    .third {
+        position: relative;
+        bottom: 0!important;
+        margin-bottom: 20px!important;
+        float: right!important;
+    }
+    
     img {
         border-radius: 10%!important;
     }
@@ -170,8 +194,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9 col-md-12 col-12 text-center">
                     <div class="page-banner-content">
-                        <h1 class="display-4 font-weight-bold">We create your brand</h1>
-                        <p>We'd love to show you our projects.</p>
+                        <h1 class="display-4 font-weight-bold">Tech news</h1>
+
                     </div>
                 </div>
             </div>
@@ -190,11 +214,13 @@
                     <h2 class="section-title">
                         {{news.title}}
                     </h2>
+                    {% for picture in pictures %} {% if forloop.counter == 1 %}
+                    <br>
+                    <div class="first"> <img src="{{ picture.image.url }}" width=200 height="200"> </div>
                 </center>
 
                 <br>
-                <br>
-                <br>
+
 
                 <!-- Subheading -->
                 <center>
@@ -206,15 +232,15 @@
 
                 <br>
                 <br>
-                <br>
+                <br> {% elif forloop.counter == 2 %}
+                <div class="second"> <img src="{{ picture.image.url }}" width=200 height="200"> </div>
+                {% elif forloop.counter == 3 %}
+                <div class="third"> <img src="{{ picture.image.url }}" width=200 height="200"> </div>
 
-                <div id="slideshow-container">
-                    <figure id="slideshow">
-                        {% for picture in pictures %}
-                        <img src="{{ picture.image.url }}" width=400 height="400"> {% endfor %}
 
-                    </figure>
-                </div>
+                {% endif %} {% endfor %}
+
+
 
                 <br>
                 <br>
@@ -259,16 +285,14 @@
                         <h3>Socials</h3>
                         <!-- Links -->
                         <ul class="list-unstyled footer-links">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+
                             <li>
                                 <a href="#"><i class="fab fa-twitter"></i>Twitter
                             </a></li>
-                            <li><a href="#"><i class="fab fa-pinterest-p"></i>Pinterest
-                            </a></li>
+
                             <li><a href="#"><i class="fab fa-linkedin"></i>linkedin
                             </a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i>YouTube
-                            </a></li>
+
                         </ul>
                     </div>
                 </div>
